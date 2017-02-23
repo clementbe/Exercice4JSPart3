@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <label for="motdepasse">Votre mot de passe : </label><input type="text" name="motdepasse" value="" id="motdepasse" />
+    <label for="confirmation">Confirmez : </label><input type="text" name="confirmation" value="" id="confirmation" />
+    <button type="button" name="button" onclick="formu()">Vérification</button>
+  </form>
+  <script>
+    function formu() {
+      if ((document.getElementById('motdepasse').value) != (document.getElementById('confirmation').value)) {
+        document.getElementById('motdepasse').style.border = '3px red solid';
+        document.getElementById('confirmation').style.border = '3px red solid';
+      }
+      else {
+        document.getElementById('motdepasse').style.border = '3px green solid';
+        document.getElementById('confirmation').style.border = '3px green solid';
+      }
+    }
+  </script>
+</body>
+</html>
